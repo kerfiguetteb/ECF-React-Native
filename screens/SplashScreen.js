@@ -1,9 +1,10 @@
-import React, {useState, useEffect} from 'react';
+import React from 'react';
 import { FlatList, Button, StyleSheet, Text, View } from 'react-native';
 import { useFonts } from 'expo-font';
-
 export default function SplashScreen({navigation}) {
-  function goToBook(reso) {
+
+
+  function goToLibrary(reso) {
     navigation.reset({
       index: 0,
       routes: [
@@ -21,7 +22,7 @@ export default function SplashScreen({navigation}) {
 return <View style={styles.container}>
 <Text style={styles.title}>Book'app</Text>
 
-<Button onPress={()=> goToBook('Book')}
+<Button onPress={()=> goToLibrary('Library')}
   title="Commencer"
   color="gray"/>
 
@@ -31,7 +32,10 @@ return <View style={styles.container}>
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff'
+    backgroundColor: '#fff',
+        textAlign: 'center'
+
+
   },
   title: {
     fontFamily: 'Yellowtail',
